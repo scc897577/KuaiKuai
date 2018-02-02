@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ccstest.refresh.RefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:addStatesFromChildren="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.ccstest.activity.ScrollingActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/wallet_bg4"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                >
+
+                <LinearLayout
+                    android:id="@+id/llllll"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/player_btn_share"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/player_btn_share"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/icon_heart"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/icon_heart"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="10dp"
+                    android:text="注册/登录"
+                    android:textSize="16sp"
+                    />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+                <com.sloydev.collapsingavatartoolbar.CollapsingAvatarToolbar
+                    android:id="@+id/avatartoolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:collapsedImageSize="30dp"
+                    app:collapsedPadding="2dp"
+                    app:expandedImageSize="60dp"
+                    app:expandedPadding="2dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@id/cat_avatar"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@drawable/icon"
+                            app:border_color="#fff"
+                            app:border_width="2dp"
+                            />
+
+                        <TextView
+                            android:id="@id/cat_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            />
+                    </LinearLayout>
+
+                </com.sloydev.collapsingavatartoolbar.CollapsingAvatarToolbar>
+
+                <com.ccstest.refresh.WaveView3
+                    android:id="@+id/wave_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone"
+                    />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_scrolling"/>
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:src="@android:drawable/ic_dialog_email"-->
+        <!--app:layout_anchor="@id/app_bar"-->
+        <!--app:layout_anchorGravity="bottom|end"/>-->
+
+    </android.support.design.widget.CoordinatorLayout>
+</com.ccstest.refresh.RefreshLayout>
